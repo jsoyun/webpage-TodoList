@@ -1,0 +1,77 @@
+// @font-face {
+//   font-family: "CWDangamAsac-Bold";
+//   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/CWDangamAsac-Bold.woff")
+//     format("woff");
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: "Y_Spotlight";
+//   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/Y_Spotlight.woff")
+//     format("woff");
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+@import "./styles/utils.scss";
+
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+  .form {
+    position: relative;
+    z-index: 1;
+    background: #ffffff;
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.315), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    input {
+      font-family: "CWDangamAsac-Bold";
+      outline: 0;
+      background: #f2f2f2;
+      width: 100%;
+      border: 0;
+      margin: 0 0 15px;
+      padding: 15px;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+    // input:active {
+    //   font-family: "Y_Spotlight";
+    // }
+    button {
+      font-family: "Y_Spotlight";
+      font-weight: bold;
+      text-transform: uppercase;
+      outline: 0;
+      border: 0;
+      background: #6566bd;
+      width: 100%;
+      padding: 15px;
+      color: #ffffff;
+      font-size: 14px;
+      //   -webkit-transition: all 0.3 ease;
+      //   transition: all 0.3 ease;
+      cursor: pointer;
+    }
+    button:hover,
+    button:active
+    // button:focus
+    {
+      background: #4e4f94;
+    }
+    .message {
+      margin: 15px 0 0;
+      color: #b3b3b3;
+      font-size: 12px;
+      a {
+        color: #5b5cc2;
+        text-decoration: none;
+      }
+    }
+  }
+}
