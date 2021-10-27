@@ -10,7 +10,8 @@ const About = ({ location }) => {
   return (
     <div>
       <h1>나는 어바웃페이지</h1>
-      <h2>오늘점심은 롣지</h2>
+      <h2>오늘점심은롣지</h2>
+
       <h3>저녁은 삼겹살에 밥</h3>
       {showAbout && <h6>이히히</h6>}
     </div>
