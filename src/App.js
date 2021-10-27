@@ -8,21 +8,6 @@ import Home from "./component/Home";
 import Login from "./component/Login";
 import Page from "./component/Page";
 import CreateAccount from "./component/CreateAccount";
-import TodoTemplate from "./component/TodoTemplate";
-import TodoHead from "./component/TodoHead";
-import TodoList from "./component/TodoList";
-import TodoCreate from "./component/TodoCreate";
-import { TodoProvider } from "./component/TodoContext";
-
-//styled-components 에서 특정 컴포넌트를 만들어서 스타일링 하는게 아니라
-//글로벌 스타일을 추가하고 싶을 땐 createGlobalStyle 이라는 것을 사용
-import { createGlobalStyle } from "styled-components";
-
-//todo리스트만들기
-const GlobalStyle = createGlobalStyle`
-p{
-  background:  #e9ecef;
-}`;
 
 /*
 Route path='주소규칙'
@@ -33,7 +18,7 @@ const App = () => {
       <h1 className="main-title">이곳에 온 것을 환영한다</h1>
       <ul className>
         <li>
-          <Link to="/">홈</Link>
+          <Link to="/">뭐부터?</Link>
         </li>
 
         <li>
@@ -49,14 +34,7 @@ const App = () => {
           <Link to="/page/grape">포도</Link>
         </li>
       </ul>
-      <TodoProvider>
-        <GlobalStyle />
-        <TodoTemplate>
-          <TodoHead />
-          <TodoList />
-          <TodoCreate />
-        </TodoTemplate>
-      </TodoProvider>
+
       <Route path="/" component={Home} exact={true} />
       <Route path="/about" component={About} />
       <Route path="/login" component={Login} />
