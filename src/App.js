@@ -2,7 +2,8 @@ import React from "react";
 import "./login.scss";
 import "./App.scss";
 import { Route, Link } from "react-router-dom";
-import About from "./component/About";
+// import About from "./component/About";
+import { About } from "./component/ComponentPages"; //App.js에 컴포넌트쓴거 여기다가 묶어줄 수 있음!!
 import Home from "./component/Home";
 import Login from "./component/Login";
 import Page from "./component/Page";
@@ -11,6 +12,7 @@ import TodoTemplate from "./component/TodoTemplate";
 import TodoHead from "./component/TodoHead";
 import TodoList from "./component/TodoList";
 import TodoCreate from "./component/TodoCreate";
+import { TodoProvider } from "./component/TodoContext";
 
 //styled-components 에서 특정 컴포넌트를 만들어서 스타일링 하는게 아니라
 //글로벌 스타일을 추가하고 싶을 땐 createGlobalStyle 이라는 것을 사용
@@ -47,14 +49,14 @@ const App = () => {
           <Link to="/page/grape">포도</Link>
         </li>
       </ul>
-      <>
+      <TodoProvider>
         <GlobalStyle />
         <TodoTemplate>
           <TodoHead />
           <TodoList />
           <TodoCreate />
         </TodoTemplate>
-      </>
+      </TodoProvider>
       <Route path="/" component={Home} exact={true} />
       <Route path="/about" component={About} />
       <Route path="/login" component={Login} />
